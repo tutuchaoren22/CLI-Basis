@@ -12,13 +12,41 @@
 10.	请将 ~/cli-practice/document 目录复制到 ~/cli-practice/docs，目录中的文件也要进行复制。
 11.	删除 ~/cli-practice/document 目录及其中文件。
 12.	请创建 ~/cli-practice/parent/child/docs 目录。
-13.	请将 ~/cli-practice/parent/child/docs文件复制到~/cli-practice/parent/child/docs目录下
+13.	请将 ~/cli-practice/docs/introduction.txt 文件复制到~/cli-practice/parent/child/docs目录下
 
 # 相对应的code
 
 ```
-$ mkdir ~/cli-practice
-
-
+1.
+mkdir  ~/cli-practice
+2.
+touch  ~/cli-practice/readme.md
+3.
+Cat >> ~/cli-practice/readme.md <<EOF
+Hi there, this is a readme file.
+EOF
+4.
+cat >> ~/cli-practice/readme.md <<EOF
+This is the second line of the readme file.
+EOF
+5.
+mv   ~/cli-practice/readme.md   ~/cli-practice/readme.txt
+6.
+mkdir ~/cli-practice/document
+7.
+mv ~/cli-practice/readme.txt  ~/cli-practice/document/introduction.txt
+8.
+cp  ~/cli-practice/document/introduction.txt  ~/cli-practice/document/readme.txt
+9.
+cat > ~/cli-practice/document/readme.txt  <<EOF
+The quick brown fox jumps over a lazy dog
+EOF
+10.
+cp –a  ~/cli-practice/document  ~/cli-practice/docs
+11.
+rm -r ~/cli-practice/document 
+12.
+mkdir –p ~/cli-practice/parent/child/docs
+13.
+cp ~/cli-practice/docs/introduction.txt  ~/cli-practice/parent/child/docs 
 ```
-
